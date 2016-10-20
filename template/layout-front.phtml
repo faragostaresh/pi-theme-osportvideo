@@ -119,13 +119,8 @@ $platform = Pi::service('browser')->getPlatform();
     <div class="pi-header-body">
         <div class="container">
             <div class="row">
-                <div class="col-xs-5 pi-header-icon">
+                <div class="col-xs-4 pi-header-icon">
                     <ul>
-                        <li>
-                            <a href="#" title="">
-                                <img src="<?php echo $this->assetTheme('image/header-profile.png'); ?>" alt="" class="img-responsive">
-                            </a>
-                        </li>
                         <li>
                             <a href="#" title="">
                                 <img src="<?php echo $this->assetTheme('image/header-upload.png'); ?>" alt="" class="img-responsive">
@@ -148,7 +143,7 @@ $platform = Pi::service('browser')->getPlatform();
                         </li>
                     </ul>
                 </div>
-                <div class="col-xs-4 pi-header-search">
+                <div class="col-xs-5 pi-header-search">
                     <?php echo $this->widget('search-search'); ?>
                 </div>
                 <div class="col-xs-3 pi-header-logo">
