@@ -211,13 +211,13 @@ $platform = Pi::service('browser')->getPlatform();
 
             <!-- Center bottom zone -->
             <?php if (isset($blocks['7'])) { ?>
-            <div class="row">
-                <div class="pi-zone-7 col-xs-12">
-                    <?php foreach ($blocks['7'] as $block) {
-                        include $blockTemplate;
-                    } ?>
+                <div class="row">
+                    <div class="pi-zone-7 col-xs-12">
+                        <?php foreach ($blocks['7'] as $block) {
+                            include $blockTemplate;
+                        } ?>
+                    </div>
                 </div>
-            </div>
             <?php } ?>
             <div class="row">
                 <!-- Left zone -->
@@ -339,62 +339,76 @@ $platform = Pi::service('browser')->getPlatform();
             <div class="row">
                 <div class="clearfix">
                     <div class="col-xs-3">
-                        <h4>فروشگاه ورزشی</h4>
-                        <ul class="list-unstyled">
-                            <li><a title="تیمی" href="<?php echo Pi::url($this->url('home')); ?>shop/team-sports"><i class="fa fa-angle-left"></i> محصولات تیمی</a></li>
-                            <li><a title="رزمی" href="<?php echo Pi::url($this->url('home')); ?>shop/martial-art"><i class="fa fa-angle-left"></i> محصولات رزمی</a></li>
-                            <li><a title="فیتنس" href="<?php echo Pi::url($this->url('home')); ?>shop/fitness"><i class="fa fa-angle-left"></i> محصولات فیتنس</a></li>
-                            <li><a title="راکتی" href="<?php echo Pi::url($this->url('home')); ?>shop/racquet-sports"><i class="fa fa-angle-left"></i> محصولات راکتی</a></li>
-                            <li><a title="اکشن" href="<?php echo Pi::url($this->url('home')); ?>shop/action"><i class="fa fa-angle-left"></i> محصولات اکشن</a></li>
-                            <li><a title="تمرکزی" href="<?php echo Pi::url($this->url('home')); ?>shop/concentration-sports"><i class="fa fa-angle-left"></i> محصولات تمرکزی</a></li>
-                            <li><a title="آبی" href="<?php echo Pi::url($this->url('home')); ?>shop/aqua-sports"><i class="fa fa-angle-left"></i> محصولات آبی</a></li>
-                            <li><a title="زمستانی" href="<?php echo Pi::url($this->url('home')); ?>shop/winter-sports"><i class="fa fa-angle-left"></i> محصولات زمستانی</a></li>
-                            <li><a title="هوای آزاد" href="<?php echo Pi::url($this->url('home')); ?>shop/outdoor-sports"><i class="fa fa-angle-left"></i> محصولات هوای آزاد</a></li>
-                            <li><a title="عمومی" href="<?php echo Pi::url($this->url('home')); ?>shop/general-sports"><i class="fa fa-angle-left"></i> محصولات عمومی</a></li>
-                        </ul>
+                        <h2>درباره <?php echo _escape($sitename); ?></h2>
+                        <p>آنلاین اسپرت،<strong><a href="<?php echo Pi::url($this->url('home')); ?>" title="<?php echo _escape($sitename); ?>"><?php echo _escape($sitename); ?></a></strong> ایران است که به صورت تخصصی به موضوع ورزش در رشته های مختلف میپردازد.این سامانه بر آن است تا مرجعی برای تمامی ورزشکاران و ورزش دوستان باشد.</p>
+                        <div class="clearfix">
+                            <div class="col-xs-6">
+                                <img class="img-responsive" src="<?php echo $this->assetTheme('image/behpardakht.png'); ?>" alt="به پرداخت">
+                            </div>
+                            <div class="col-xs-6">
+                                <img id="drftbrgwrgvlbrgwrgvl" class="img-responsive" onclick='window.open("http://trustseal.enamad.ir/Verify.aspx?id=16565&p=nbpdhwmbyncrhwmbyncr", "Popup","toolbar=no, location=no, statusbar=no, menubar=no, scrollbars=1, resizable=0, width=580, height=600, top=30")' alt='نماد اعتماد الکترونیک' src='http://trustseal.enamad.ir/logo.aspx?id=16565&p=lznbkzoefujykzoefujy'/>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-xs-3">
-                        <h4>مربیان و باشگاه های ورزشی</h4>
-                        <ul class="list-unstyled">
-                            <li><a title="تیمی" href="<?php echo Pi::url($this->url('home')); ?>guide/team-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های تیمی</a></li>
-                            <li><a title="رزمی" href="<?php echo Pi::url($this->url('home')); ?>guide/martial-art"><i class="fa fa-angle-left"></i> مربیان و باشگاه های رزمی</a></li>
-                            <li><a title="فیتنس" href="<?php echo Pi::url($this->url('home')); ?>guide/fitness"><i class="fa fa-angle-left"></i> مربیان و باشگاه های فیتنس</a></li>
-                            <li><a title="راکتی" href="<?php echo Pi::url($this->url('home')); ?>guide/racquet-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های راکتی</a></li>
-                            <li><a title="اکشن" href="<?php echo Pi::url($this->url('home')); ?>guide/action"><i class="fa fa-angle-left"></i> مربیان و باشگاه های اکشن</a></li>
-                            <li><a title="تمرکزی" href="<?php echo Pi::url($this->url('home')); ?>guide/concentration-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های تمرکزی</a></li>
-                            <li><a title="آبی" href="<?php echo Pi::url($this->url('home')); ?>guide/aqua-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های آبی</a></li>
-                            <li><a title="زمستانی" href="<?php echo Pi::url($this->url('home')); ?>guide/winter-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های زمستانی</a></li>
-                            <li><a title="هوای آزاد" href="<?php echo Pi::url($this->url('home')); ?>guide/outdoor-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های هوای آزاد</a></li>
-                            <li><a title="عمومی" href="<?php echo Pi::url($this->url('home')); ?>guide/general-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های عمومی</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-3">
-                        <h4>ویدیو های ورزشی</h4>
-                        <ul class="list-unstyled">
-                            <li><a title="تیمی" href="<?php echo Pi::url($this->url('home')); ?>video/team-sports"><i class="fa fa-angle-left"></i> ویدیو های تیمی</a></li>
-                            <li><a title="رزمی" href="<?php echo Pi::url($this->url('home')); ?>video/martial-art"><i class="fa fa-angle-left"></i> ویدیو های رزمی</a></li>
-                            <li><a title="فیتنس" href="<?php echo Pi::url($this->url('home')); ?>video/fitness"><i class="fa fa-angle-left"></i> ویدیو های فیتنس</a></li>
-                            <li><a title="راکتی" href="<?php echo Pi::url($this->url('home')); ?>video/racquet-sports"><i class="fa fa-angle-left"></i> ویدیو های راکتی</a></li>
-                            <li><a title="اکشن" href="<?php echo Pi::url($this->url('home')); ?>video/action"><i class="fa fa-angle-left"></i> ویدیو های اکشن</a></li>
-                            <li><a title="تمرکزی" href="<?php echo Pi::url($this->url('home')); ?>video/concentration-sports"><i class="fa fa-angle-left"></i> ویدیو های تمرکزی</a></li>
-                            <li><a title="آبی" href="<?php echo Pi::url($this->url('home')); ?>video/aqua-sports"><i class="fa fa-angle-left"></i> ویدیو های آبی</a></li>
-                            <li><a title="زمستانی" href="<?php echo Pi::url($this->url('home')); ?>video/winter-sports"><i class="fa fa-angle-left"></i> ویدیو های زمستانی</a></li>
-                            <li><a title="هوای آزاد" href="<?php echo Pi::url($this->url('home')); ?>video/outdoor-sports"><i class="fa fa-angle-left"></i> ویدیو های هوای آزاد</a></li>
-                            <li><a title="عمومی" href="<?php echo Pi::url($this->url('home')); ?>video/general-sports"><i class="fa fa-angle-left"></i> ویدیو های عمومی</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-3">
-                        <h4>سایر بخش های ورزشی</h4>
-                        <ul class="list-unstyled">
-                            <li><a title="استعدادیابی آنلاین" href="<?php echo Pi::url($this->url('home')); ?>talent"><i class="fa fa-angle-left"></i> استعدادیابی آنلاین</a></li>
-                            <li><a title="مسابقات و چالش ها" href="<?php echo Pi::url($this->url('home')); ?>news/competitions-and-challenges"><i class="fa fa-angle-left"></i> مسابقات و چالش ها</a></li>
-                            <li><a title="علم ورزش" href="<?php echo Pi::url($this->url('home')); ?>news"><i class="fa fa-angle-left"></i> علم ورزش</a></li>
-                            <li><a title="قوانین و مقررات" href="<?php echo Pi::url($this->url('home')); ?>page/terms-and-conditions"><i class="fa fa-angle-left"></i> قوانین و مقررات</a></li>
-                            <li><a title="راهنمای خرید و ارسال" href="<?php echo Pi::url($this->url('home')); ?>page/help"><i class="fa fa-angle-left"></i> راهنمای خرید و ارسال</a></li>
-                            <li><a title="تبلیغات" href="<?php echo Pi::url($this->url('home')); ?>page/ads"><i class="fa fa-angle-left"></i> تبلیغات</a></li>
-                            <li><a title="درباره ما" href="<?php echo Pi::url($this->url('home')); ?>page/about-us"><i class="fa fa-angle-left"></i> درباره ما</a></li>
-                            <li><a title="تماس با ما" href="<?php echo Pi::url($this->url('home')); ?>contact"><i class="fa fa-angle-left"></i> تماس با ما</a></li>
-                        </ul>
+                    <div class="col-xs-9">
+                        <div class="col-xs-3">
+                            <h4>فروشگاه ورزشی</h4>
+                            <ul class="list-unstyled">
+                                <li><a title="تیمی" href="<?php echo Pi::url($this->url('home')); ?>shop/team-sports"><i class="fa fa-angle-left"></i> محصولات تیمی</a></li>
+                                <li><a title="رزمی" href="<?php echo Pi::url($this->url('home')); ?>shop/martial-art"><i class="fa fa-angle-left"></i> محصولات رزمی</a></li>
+                                <li><a title="فیتنس" href="<?php echo Pi::url($this->url('home')); ?>shop/fitness"><i class="fa fa-angle-left"></i> محصولات فیتنس</a></li>
+                                <li><a title="راکتی" href="<?php echo Pi::url($this->url('home')); ?>shop/racquet-sports"><i class="fa fa-angle-left"></i> محصولات راکتی</a></li>
+                                <li><a title="اکشن" href="<?php echo Pi::url($this->url('home')); ?>shop/action"><i class="fa fa-angle-left"></i> محصولات اکشن</a></li>
+                                <li><a title="تمرکزی" href="<?php echo Pi::url($this->url('home')); ?>shop/concentration-sports"><i class="fa fa-angle-left"></i> محصولات تمرکزی</a></li>
+                                <li><a title="آبی" href="<?php echo Pi::url($this->url('home')); ?>shop/aqua-sports"><i class="fa fa-angle-left"></i> محصولات آبی</a></li>
+                                <li><a title="زمستانی" href="<?php echo Pi::url($this->url('home')); ?>shop/winter-sports"><i class="fa fa-angle-left"></i> محصولات زمستانی</a></li>
+                                <li><a title="هوای آزاد" href="<?php echo Pi::url($this->url('home')); ?>shop/outdoor-sports"><i class="fa fa-angle-left"></i> محصولات هوای آزاد</a></li>
+                                <li><a title="عمومی" href="<?php echo Pi::url($this->url('home')); ?>shop/general-sports"><i class="fa fa-angle-left"></i> محصولات عمومی</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3">
+                            <h4>مربیان و باشگاه های ورزشی</h4>
+                            <ul class="list-unstyled">
+                                <li><a title="تیمی" href="<?php echo Pi::url($this->url('home')); ?>guide/team-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های تیمی</a></li>
+                                <li><a title="رزمی" href="<?php echo Pi::url($this->url('home')); ?>guide/martial-art"><i class="fa fa-angle-left"></i> مربیان و باشگاه های رزمی</a></li>
+                                <li><a title="فیتنس" href="<?php echo Pi::url($this->url('home')); ?>guide/fitness"><i class="fa fa-angle-left"></i> مربیان و باشگاه های فیتنس</a></li>
+                                <li><a title="راکتی" href="<?php echo Pi::url($this->url('home')); ?>guide/racquet-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های راکتی</a></li>
+                                <li><a title="اکشن" href="<?php echo Pi::url($this->url('home')); ?>guide/action"><i class="fa fa-angle-left"></i> مربیان و باشگاه های اکشن</a></li>
+                                <li><a title="تمرکزی" href="<?php echo Pi::url($this->url('home')); ?>guide/concentration-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های تمرکزی</a></li>
+                                <li><a title="آبی" href="<?php echo Pi::url($this->url('home')); ?>guide/aqua-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های آبی</a></li>
+                                <li><a title="زمستانی" href="<?php echo Pi::url($this->url('home')); ?>guide/winter-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های زمستانی</a></li>
+                                <li><a title="هوای آزاد" href="<?php echo Pi::url($this->url('home')); ?>guide/outdoor-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های هوای آزاد</a></li>
+                                <li><a title="عمومی" href="<?php echo Pi::url($this->url('home')); ?>guide/general-sports"><i class="fa fa-angle-left"></i> مربیان و باشگاه های عمومی</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3">
+                            <h4>ویدیو های ورزشی</h4>
+                            <ul class="list-unstyled">
+                                <li><a title="تیمی" href="<?php echo Pi::url($this->url('home')); ?>video/team-sports"><i class="fa fa-angle-left"></i> ویدیو های تیمی</a></li>
+                                <li><a title="رزمی" href="<?php echo Pi::url($this->url('home')); ?>video/martial-art"><i class="fa fa-angle-left"></i> ویدیو های رزمی</a></li>
+                                <li><a title="فیتنس" href="<?php echo Pi::url($this->url('home')); ?>video/fitness"><i class="fa fa-angle-left"></i> ویدیو های فیتنس</a></li>
+                                <li><a title="راکتی" href="<?php echo Pi::url($this->url('home')); ?>video/racquet-sports"><i class="fa fa-angle-left"></i> ویدیو های راکتی</a></li>
+                                <li><a title="اکشن" href="<?php echo Pi::url($this->url('home')); ?>video/action"><i class="fa fa-angle-left"></i> ویدیو های اکشن</a></li>
+                                <li><a title="تمرکزی" href="<?php echo Pi::url($this->url('home')); ?>video/concentration-sports"><i class="fa fa-angle-left"></i> ویدیو های تمرکزی</a></li>
+                                <li><a title="آبی" href="<?php echo Pi::url($this->url('home')); ?>video/aqua-sports"><i class="fa fa-angle-left"></i> ویدیو های آبی</a></li>
+                                <li><a title="زمستانی" href="<?php echo Pi::url($this->url('home')); ?>video/winter-sports"><i class="fa fa-angle-left"></i> ویدیو های زمستانی</a></li>
+                                <li><a title="هوای آزاد" href="<?php echo Pi::url($this->url('home')); ?>video/outdoor-sports"><i class="fa fa-angle-left"></i> ویدیو های هوای آزاد</a></li>
+                                <li><a title="عمومی" href="<?php echo Pi::url($this->url('home')); ?>video/general-sports"><i class="fa fa-angle-left"></i> ویدیو های عمومی</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-3">
+                            <h4>سایر بخش های ورزشی</h4>
+                            <ul class="list-unstyled">
+                                <li><a title="استعدادیابی آنلاین" href="<?php echo Pi::url($this->url('home')); ?>talent"><i class="fa fa-angle-left"></i> استعدادیابی آنلاین</a></li>
+                                <li><a title="مسابقات و چالش ها" href="<?php echo Pi::url($this->url('home')); ?>news/competitions-and-challenges"><i class="fa fa-angle-left"></i> مسابقات و چالش ها</a></li>
+                                <li><a title="علم ورزش" href="<?php echo Pi::url($this->url('home')); ?>news"><i class="fa fa-angle-left"></i> علم ورزش</a></li>
+                                <li><a title="قوانین و مقررات" href="<?php echo Pi::url($this->url('home')); ?>page/terms-and-conditions"><i class="fa fa-angle-left"></i> قوانین و مقررات</a></li>
+                                <li><a title="راهنمای خرید و ارسال" href="<?php echo Pi::url($this->url('home')); ?>page/help"><i class="fa fa-angle-left"></i> راهنمای خرید و ارسال</a></li>
+                                <li><a title="تبلیغات" href="<?php echo Pi::url($this->url('home')); ?>page/ads"><i class="fa fa-angle-left"></i> تبلیغات</a></li>
+                                <li><a title="درباره ما" href="<?php echo Pi::url($this->url('home')); ?>page/about-us"><i class="fa fa-angle-left"></i> درباره ما</a></li>
+                                <li><a title="تماس با ما" href="<?php echo Pi::url($this->url('home')); ?>contact"><i class="fa fa-angle-left"></i> تماس با ما</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
