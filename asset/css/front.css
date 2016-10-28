@@ -362,45 +362,6 @@ form .icon-question-sign {
     font-size: 35px;
 }
 
-.pi-header .navbar-default {
-    margin-bottom: 0;
-    border-radius: 0;
-    background: #fff;
-    border-color: #fff;
-    height: 30px;
-}
-
-.pi-header .navbar-default .navbar-collapse {
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.pi-header .navbar-default ul {
-    width: 100%;
-}
-
-.pi-header .navbar-default ul li {
-    width: 12.4%;
-    text-align: center;
-    padding: 0 5px;
-}
-
-.pi-header .navbar-default ul li a {
-    background: #C6C6C6;
-    color: #fff;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 4px 8px;
-    border-radius: 20px 0px 20px 20px;
-    -moz-border-radius: 20px 0px 20px 20px;
-    -webkit-border-radius: 20px 0px 20px 20px;
-}
-
-.pi-header .navbar-default ul li a:hover {
-    background: #A5A5A5;
-    color: #fff;
-}
-
 .pi-header .pi-header-icon {
     margin: 0;
     padding: 0;
@@ -444,6 +405,162 @@ form .icon-question-sign {
 
 .pi-header .user-bar a {
     color: #fff;
+}
+
+.pi-header .navbar-default {
+    margin-bottom: 0;
+    border-radius: 0;
+    background: #fff;
+    border-color: #fff;
+    height: 30px;
+}
+
+.pi-header .navbar-default .navbar-collapse {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.pi-header .navbar-default ul {
+    width: 100%;
+}
+
+.pi-header .navbar-default ul li {
+    width: 12.4%;
+    text-align: center;
+    padding: 0 10px;
+}
+.pi-header .navbar-default ul li a.navbar-top-link {
+    background: #C6C6C6;
+    color: #fff;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 4px 5px;
+    border-radius: 20px 0 20px 20px;
+}
+
+.pi-header .navbar-default ul li a.navbar-top-link:hover,
+.pi-header .navbar-default ul li a.navbar-top-link:focus {
+    background: #A5A5A5;
+    color: #fff;
+}
+
+.pi-header .navbar-default ul li a.active {
+    background: #A5A5A5;
+    color: #fff;
+    padding-bottom: 20px;
+    border-radius: 20px 0 0 0;
+}
+
+.pi-header .navbar-default .yamm .nav,
+.pi-header .navbar-default .yamm .collapse,
+.pi-header .navbar-default .yamm .dropup,
+.pi-header .navbar-default .yamm .dropdown {
+    position: static;
+}
+
+.pi-header .navbar-default .yamm .container {
+    position: relative !important;
+    z-index: 10000 !important;
+    height: auto !important;
+}
+
+.pi-header .navbar-default .yamm .dropdown-menu {
+    right: auto;
+    margin-top: 0;
+    padding-top: 0;
+    background: none;
+    box-shadow: none;
+    border: 0;
+}
+
+.pi-header .navbar-default .yamm .yamm-content {
+    padding: 20px 30px;
+}
+
+.pi-header .navbar-default .yamm .dropdown.yamm-fw .dropdown-menu {
+    left: 0;
+    right: 0;
+    width: 100% !important;
+}
+
+.pi-header .navbar-default .grid-menu {
+    width: 100% !important;
+    margin: 0 25px 0 25px;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 20px;
+    background: #A5A5A5;
+}
+
+.pi-header .navbar-default .grid-menu-shop {
+    background-image: url('http://www.osport.ir/upload/image/menu/bg-shop.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+.pi-header .navbar-default .grid-menu-guide {
+    background-image: url('http://www.osport.ir/upload/image/menu/bg-guide.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+.pi-header .navbar-default .grid-menu-video {
+    background-image: url('http://www.osport.ir/upload/image/menu/bg-toor.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+.pi-header .navbar-default .grid-menu-event {
+    background-image: url('http://www.osport.ir/upload/image/menu/bg-toor.png');
+    background-position: bottom left;
+    background-repeat: no-repeat;
+}
+
+.pi-header .navbar-default .grid-menu [class*="col-"] {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 1em;
+    line-height: 2;
+    text-align: right;
+    color: #fff;
+}
+
+.pi-header .navbar-default .grid-menu h4 {
+    text-align: center;
+    font-size: 12px;
+    background: #FF8200;
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1; /* number of lines to show */
+    line-height: 20px;        /* fallback */
+    max-height: 30px;       /* fallback */
+}
+
+.pi-header .navbar-default .grid-menu a {
+    color: #fff;
+    font-size: 11px;
+}
+
+.pi-header .navbar-default .grid-menu a:hover {
+    color: #F7931D;
+}
+
+.pi-header .navbar-default .grid-menu ol {
+    margin: 4px 20px 20px 20px;
+}
+
+.pi-header .navbar-default .grid-menu li {
+    padding: 2px 5px;
+    font-size: 11px;
+    width: 100%;
+    text-align: right;
 }
 /* section */
 .pi-section {

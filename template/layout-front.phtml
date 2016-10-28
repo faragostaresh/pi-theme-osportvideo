@@ -110,8 +110,26 @@ $platform = Pi::service('browser')->getPlatform();
     <div class="pi-header-user">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12">
+                <div class="col-xs-6">
                     <?php echo $this->widget('system-user-bar'); ?>
+                </div>
+                <div class="col-xs-6">
+                    <?php /* <ul class="nav navbar-nav navbar-right pi-navbar-nav">
+                        <li>
+                            <a class="btn btn-success" href="<?php echo Pi::url($this->url('home')); ?>guide/manage" title="ثبت باشگاه و مربی">
+                                <span itemprop="name">ثبت باشگاه و مربی</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn-success" href="<?php echo Pi::url($this->url('home')); ?>video/submit" title="ارسال ویدیو">
+                                <span itemprop="name">ارسال ویدیو</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <?php echo $this->widget('shop-basket'); ?>
+                        </li>
+                    </ul> */ ?>
                 </div>
             </div>
         </div>
@@ -168,13 +186,289 @@ $platform = Pi::service('browser')->getPlatform();
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <div class="navbar-header">
-                        <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <?php echo $navigation->menu()->setUlClass('nav navbar-nav pi-navbar-nav'); ?>
+                    <div class="yamm">
+                        <?php // echo $navigation->menu()->setUlClass('nav navbar-nav pi-navbar-nav'); ?>
+                        <ul class="nav navbar-nav pi-navbar-nav">
+                            <li>
+                                <a class="navbar-top-link" href="<?php echo Pi::url($this->url('home')); ?>" title="خانه">خانه</a>
+                            </li>
+                            <li>
+                                <a class="navbar-top-link" href="<?php echo Pi::url($this->url('home')); ?>talent" title="استعداد یابی">استعداد یابی</a>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a aria-expanded="false" href="<?php echo Pi::url($this->url('home')); ?>shop" title="فروشگاه" data-toggle="dropdown" class="navbar-top-link dropdown-toggle">فروشگاه</a>
+                                <ul class="dropdown-menu">
+                                    <li class="grid-menu grid-menu-shop">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <h4>بر اساس نوع ورزش</h4>
+                                                <ol class="list-unstyled">
+                                                    <li><a title="تیمی" href="<?php echo Pi::url($this->url('home')); ?>shop/team-sports">تیمی</a></li>
+                                                    <li><a title="رزمی" href="<?php echo Pi::url($this->url('home')); ?>shop/martial-art">رزمی</a></li>
+                                                    <li><a title="فیتنس" href="<?php echo Pi::url($this->url('home')); ?>shop/fitness">فیتنس</a></li>
+                                                    <li><a title="راکتی" href="<?php echo Pi::url($this->url('home')); ?>shop/racquet-sports">راکتی</a></li>
+                                                    <li><a title="اکشن" href="<?php echo Pi::url($this->url('home')); ?>shop/action">اکشن</a></li>
+                                                    <li><a title="تمرکزی" href="<?php echo Pi::url($this->url('home')); ?>shop/concentration-sports">تمرکزی</a></li>
+                                                    <li><a title="آبی" href="<?php echo Pi::url($this->url('home')); ?>shop/aqua-sports">آبی</a></li>
+                                                    <li><a title="زمستانی" href="<?php echo Pi::url($this->url('home')); ?>shop/winter-sports">زمستانی</a></li>
+                                                    <li><a title="هوای آزاد" href="<?php echo Pi::url($this->url('home')); ?>shop/outdoor-sports">هوای آزاد</a></li>
+                                                    <li><a title="عمومی" href="<?php echo Pi::url($this->url('home')); ?>shop/general-sports">عمومی</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <h4>براساس برند</h4>
+                                                <ol class="list-unstyled">
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/adidas" title="Adidas">Adidas</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/li-ning" title="LI-NING">LI-NING</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/lp-support" title="LP-SUPPORT">LP-SUPPORT</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/champex" title="Champex">Champex</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/the-north-face" title="THE NORTH FACE">THE NORTH FACE</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/president" title="President">President</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/skechers" title="SKECKERS">SKECKERS</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/under-armour" title="UNDER ARMOUR">UNDER ARMOUR</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/saucony" title="saucony">saucony</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/nike" title="NIKE">NIKE</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/reebok" title="Reebok">Reebok</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <h4>ورزش های پر طرفدار</h4>
+                                                <ol class="list-unstyled">
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/football" title="فوتبال">فوتبال</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/boxing" title="بوکس">بوکس</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/karate" title="کاراته">کاراته</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/taekwondo" title="تکواندو">تکواندو</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/mma" title="MMA">MMA</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/jodo" title="جودو">جودو</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/fitness" title="فیتنس">فیتنس</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/basketball" title="بسکتبال">بسکتبال</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/mountaineering" title="کوهنوردی">کوهنوردی</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/tennis" title="تنیس">تنیس</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <h4>بر اساس نوع کالا</h4>
+                                                <ol class="list-unstyled">
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/apparel" title="لباس">لباس</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/shoes" title="کفش">کفش</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/accessories" title="تجهیزات جانبی">تجهیزات جانبی</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/sport-medicine" title="علم تمرین">علم تمرین</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>shop/exciting-offer" title="پیشنهاد هیجان انگیز">پیشنهاد هیجان انگیز</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a aria-expanded="false" href="<?php echo Pi::url($this->url('home')); ?>guide" title="مربیان و باشگاه ها" data-toggle="dropdown" class="navbar-top-link dropdown-toggle">مربیان و باشگاه ها</a>
+                                <ul class="dropdown-menu">
+                                    <li class="grid-menu grid-menu-guide">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <h4>بر اساس نوع ورزش</h4>
+                                                <ol class="list-unstyled">
+                                                    <li><a title="تیمی" href="<?php echo Pi::url($this->url('home')); ?>guide/team-sports">تیمی</a></li>
+                                                    <li><a title="رزمی" href="<?php echo Pi::url($this->url('home')); ?>guide/martial-art">رزمی</a></li>
+                                                    <li><a title="فیتنس" href="<?php echo Pi::url($this->url('home')); ?>guide/fitness">فیتنس</a></li>
+                                                    <li><a title="راکتی" href="<?php echo Pi::url($this->url('home')); ?>guide/racquet-sports">راکتی</a></li>
+                                                    <li><a title="اکشن" href="<?php echo Pi::url($this->url('home')); ?>guide/action">اکشن</a></li>
+                                                    <li><a title="تمرکزی" href="<?php echo Pi::url($this->url('home')); ?>guide/concentration-sports">تمرکزی</a></li>
+                                                    <li><a title="آبی" href="<?php echo Pi::url($this->url('home')); ?>guide/aqua-sports">آبی</a></li>
+                                                    <li><a title="زمستانی" href="<?php echo Pi::url($this->url('home')); ?>guide/winter-sports">زمستانی</a></li>
+                                                    <li><a title="هوای آزاد" href="<?php echo Pi::url($this->url('home')); ?>guide/outdoor-sports">هوای آزاد</a></li>
+                                                    <li><a title="عمومی" href="<?php echo Pi::url($this->url('home')); ?>guide/general-sports">عمومی</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <h4>بر اساس استان</h4>
+                                                <ol class="list-unstyled">
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/tehran" title="تهران">تهران</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/isfahan" title="اصفهان">اصفهان</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/fars" title="فارس">فارس</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/alborz" title="البرز">البرز</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/khorasan" title="خراسان">خراسان</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/east-azarbaijan" title="آذربایجان شرقی">آذربایجان شرقی</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/khuzestan" title="خوزستان">خوزستان</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/yazd" title="یزد">یزد</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-xs-6 row">
+                                                <h4>ورزش های پر طرفدار</h4>
+                                                <div class="col-xs-6">
+                                                    <ol class="list-unstyled">
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/football" title="فوتبال">فوتبال</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/boxing" title="بوکس">بوکس</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/karate" title="کاراته">کاراته</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/taekwondo" title="تکواندو">تکواندو</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/mma" title="MMA">MMA</a></li>
+                                                    </ol>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <ol class="list-unstyled">
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/jodo" title="جودو">جودو</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/fitness" title="فیتنس">فیتنس</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/basketball" title="بسکتبال">بسکتبال</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/mountaineering" title="کوهنوردی">کوهنوردی</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/tennis" title="تنیس">تنیس</a></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a aria-expanded="false" href="<?php echo Pi::url($this->url('home')); ?>video" title="ویدیو" data-toggle="dropdown" class="navbar-top-link dropdown-toggle">ویدیو</a>
+                                <ul class="dropdown-menu">
+                                    <li class="grid-menu grid-menu-video">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <h4>بر اساس نوع ورزش</h4>
+                                                <ol class="list-unstyled">
+                                                    <li><a title="تیمی" href="<?php echo Pi::url($this->url('home')); ?>video/team-sports">تیمی</a></li>
+                                                    <li><a title="رزمی" href="<?php echo Pi::url($this->url('home')); ?>video/martial-art">رزمی</a></li>
+                                                    <li><a title="فیتنس" href="<?php echo Pi::url($this->url('home')); ?>video/fitness">فیتنس</a></li>
+                                                    <li><a title="راکتی" href="<?php echo Pi::url($this->url('home')); ?>video/racquet-sports">راکتی</a></li>
+                                                    <li><a title="اکشن" href="<?php echo Pi::url($this->url('home')); ?>video/action">اکشن</a></li>
+                                                    <li><a title="تمرکزی" href="<?php echo Pi::url($this->url('home')); ?>video/concentration-sports">تمرکزی</a></li>
+                                                    <li><a title="آبی" href="<?php echo Pi::url($this->url('home')); ?>video/aqua-sports">آبی</a></li>
+                                                    <li><a title="زمستانی" href="<?php echo Pi::url($this->url('home')); ?>video/winter-sports">زمستانی</a></li>
+                                                    <li><a title="هوای آزاد" href="<?php echo Pi::url($this->url('home')); ?>video/outdoor-sports">هوای آزاد</a></li>
+                                                    <li><a title="عمومی" href="<?php echo Pi::url($this->url('home')); ?>video/general-sports">عمومی</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <h4>بر اساس موضوع</h4>
+                                                <ol class="list-unstyled">
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>video/training" title="آموزشی">آموزشی</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>video/motivational" title="انگیزشی">انگیزشی</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>video/professionals" title="حرفه ای ها">حرفه ای ها</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>video/biography" title="بیوگرافی">بیوگرافی</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>video/sport-fun" title="طنز">طنز</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>video/sport-animation" title="انیمیشن">انیمیشن</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>video/challenges-and-competitions" title="مسابقات و چالش ها">مسابقات و چالش ها</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>video/sport-technology-brands" title="تکنولوژی ورزشی/برندها">تکنولوژی ورزشی/برندها</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-xs-6 row">
+                                                <h4>ورزش های پر طرفدار</h4>
+                                                <div class="col-xs-6">
+                                                    <ol class="list-unstyled">
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/exciting-sport-ability-challenge" title="عجیب ترین توانایی ورزشی">عجیب ترین توانایی ورزشی</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/break-dance" title="ایروبیک حرفه ای">ایروبیک حرفه ای</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/football" title="فوتبال">فوتبال</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/boxing" title="بوکس">بوکس</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/karate" title="کاراته">کاراته</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/taekwondo" title="تکواندو">تکواندو</a></li>
+                                                    </ol>
+                                                </div>
+                                                <div class="col-xs-6">
+                                                    <ol class="list-unstyled">
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/mma" title="MMA">MMA</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/jodo" title="جودو">جودو</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/fitness" title="فیتنس">فیتنس</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/basketball" title="بسکتبال">بسکتبال</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/mountaineering" title="کوهنوردی">کوهنوردی</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>video/tennis" title="تنیس">تنیس</a></li>
+                                                    </ol>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a aria-expanded="false" href="<?php echo Pi::url($this->url('home')); ?>event" title="تورها و بلیط ها" data-toggle="dropdown" class="navbar-top-link dropdown-toggle">تورها و بلیط ها</a>
+                                <ul class="dropdown-menu">
+                                    <li class="grid-menu grid-menu-event">
+                                        <div class="row">
+                                            <div class="col-xs-6">
+                                                <h4><a href="<?php echo Pi::url($this->url('home')); ?>event/tickets-to-sporting-venues" title="بلیط اماکن ورزشی">بلیط اماکن ورزشی</a></h4>
+                                                <ol class="list-unstyled">
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/swimming-pool" title="استخر">استخر</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/" title="بدنسازی">بدنسازی</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/jumping" title="جامپینگ">جامپینگ</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/paintball" title="پینت بال">پینت بال</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/carting" title="کارتینگ">کارتینگ</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/rafting" title="صخره نوردی">صخره نوردی</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/" title="سایر">سایر</a></li>
+                                                </ol>
+                                            </div>
+                                            <div class="col-xs-6">
+                                                <h4><a href="<?php echo Pi::url($this->url('home')); ?>event/sport-tours" title=" تورهای ورزشی"> تورهای ورزشی</a></h4>
+                                                <ol class="list-unstyled">
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/ecotourism-tour" title="تور طبیعت گردی">تور طبیعت گردی</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/mountain-climbing-tour" title="تور کوهنوردی">تور کوهنوردی</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/exciting-tours" title="تور هیجان انگیز">تور هیجان انگیز</a></li>
+                                                    <li><a href="<?php echo Pi::url($this->url('home')); ?>event/" title="تور دوچرخه سواری">تور دوچرخه سواری</a></li>
+                                                </ol>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a aria-expanded="false" href="<?php echo Pi::url($this->url('home')); ?>video/challenges-and-competitions" title="مسابقات و چالش ها" data-toggle="dropdown" class="navbar-top-link dropdown-toggle">مسابقات و چالش ها</a>
+                                <ul class="dropdown-menu">
+                                    <li class="grid-menu">
+                                        <div class="row">
+                                            <div class="col-xs-4">
+                                                <h4>چالش ها و مسابقات برگزار شده</h4>
+                                                <a title="چالش ها و مسابقات برگزار شده" href="<?php echo Pi::url($this->url('home')); ?>video/performed-challenge-or-competition">
+                                                    <img class="img-responsive img-rounded" src="<?php echo Pi::url($this->url('home')); ?>upload/image/menu/challengesbargozar-shode.jpg" alt="چالش ها و مسابقات برگزار شده">
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h4>چالش یا مسابقه درحال برگزاری</h4>
+                                                <a title="چالش یا مسابقه درحال برگزاری" href="<?php echo Pi::url($this->url('home')); ?>video/on-performing-challenge-or-competition">
+                                                    <img class="img-responsive img-rounded" src="<?php echo Pi::url($this->url('home')); ?>upload/image/menu/challenges-dar-hale-bargozari.jpg" alt="چالش یا مسابقه درحال برگزاری">
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-4">
+                                                <h4>چالش یا مسابقه بعدی</h4>
+                                                <a title="چالش یا مسابقه بعدی" href="<?php echo Pi::url($this->url('home')); ?>video/next-challenge-or-competition">
+                                                    <img class="img-responsive img-rounded" src="<?php echo Pi::url($this->url('home')); ?>upload/image/menu/challenges-ayande.jpg" alt="چالش یا مسابقه بعدی">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown yamm-fw">
+                                <a aria-expanded="false" href="<?php echo Pi::url($this->url('home')); ?>news/sport-science" title="علم ورزش" data-toggle="dropdown" class="navbar-top-link dropdown-toggle">علم ورزش</a>
+                                <ul class="dropdown-menu">
+                                    <li class="grid-menu">
+                                        <div class="row">
+                                            <div class="col-xs-3">
+                                                <h4>علم تمرین</h4>
+                                                <a title="علم تمرین" href="<?php echo Pi::url($this->url('home')); ?>news/sports-medicine">
+                                                    <img class="img-responsive img-rounded" src="<?php echo Pi::url($this->url('home')); ?>upload/image/menu/sports-medicine.jpg" alt="علم تمرین">
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <h4>معرفی ورزشکاران</h4>
+                                                <a title="معرفی ورزشکاران" href="<?php echo Pi::url($this->url('home')); ?>news/introduction-athletes">
+                                                    <img class="img-responsive img-rounded" src="<?php echo Pi::url($this->url('home')); ?>upload/image/menu/introduction-athletes.jpg" alt="معرفی ورزشکاران">
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <h4>مدیریت در ورزش</h4>
+                                                <a title="مدیریت در ورزش" href="<?php echo Pi::url($this->url('home')); ?>news/sports-management">
+                                                    <img class="img-responsive img-rounded" src="<?php echo Pi::url($this->url('home')); ?>upload/image/menu/sports-management.jpg" alt="مدیریت در ورزش">
+                                                </a>
+                                            </div>
+                                            <div class="col-xs-3">
+                                                <h4>تغذیه و رژیم</h4>
+                                                <a title="تغذیه و رژیم" href="<?php echo Pi::url($this->url('home')); ?>news/nutrition-and-dietetics">
+                                                    <img class="img-responsive img-rounded" src="<?php echo Pi::url($this->url('home')); ?>upload/image/menu/nutrition-and-dietetics.jpg" alt="تغذیه و رژیم">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
