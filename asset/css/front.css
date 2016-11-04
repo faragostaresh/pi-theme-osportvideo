@@ -899,6 +899,12 @@ form .icon-question-sign {
     background-image: none !important;
 }
 
+.product-page .gallery {
+    background-color: #999999;
+    padding: 10px;
+    border-radius: 4px;
+}
+
 /* customize owl carousel */
 .video-block .owl-carousel {
     height: 233px;
