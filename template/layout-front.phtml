@@ -292,11 +292,17 @@ $platform = Pi::service('browser')->getPlatform();
                                             <div class="col-xs-6 row">
                                                 <h4>باشگاه ها روی نقشه</h4>
                                                 <div class="clearfix">
-                                                    <div class="col-xs-12">
-                                                        <ul class="list-unstyled">
-                                                            <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map" title="نقشه کامل تمام استان ها">نقشه کامل تمام استان ها</a></li>
-                                                        </ul>
-                                                    </div>
+                                                    <ul class="list-unstyled col-xs-12">
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map" title="نقشه کامل تمام استان ها">نقشه کامل تمام استان ها</a></li>
+                                                    </ul>
+                                                    <ul class="list-unstyled col-xs-6">
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/1" title="استان تهران">استان تهران</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/3" title="شهر تهران">شهر تهران</a></li>
+                                                    </ul>
+                                                    <ul class="list-unstyled col-xs-6">
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/189" title="استان اصفهان">استان اصفهان</a></li>
+                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/4" title="شهر اصفهان">شهر اصفهان</a></li>
+                                                    </ul>
                                                 </div>
                                                 <h4>ورزش های پر طرفدار</h4>
                                                 <div class="clearfix">
