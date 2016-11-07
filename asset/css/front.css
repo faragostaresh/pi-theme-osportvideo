@@ -12,9 +12,9 @@ body {
 
 a {
     color: #231F20;
-    transition: all 0.8s;
+    /* transition: all 0.8s;
     -webkit-transition: all 0.8s;
-    -moz-transition: all 0.8s;
+    -moz-transition: all 0.8s; */
 }
 
 a:hover {
@@ -49,10 +49,6 @@ h5, h6 {
     .navbar-default .navbar-form {
         width: 250px;
     }
-}
-
-.pi-navbar-nav ul {
-    display: none;
 }
 
 @media (min-width: 768px) {
@@ -394,77 +390,157 @@ form .icon-question-sign {
     background: #FF8200;
 }
 
-.pi-header .pi-header-user .navbar-nav li a:hover {
-    background: #A5A5A5;
-    color: #fff;
-}
-
-.pi-header .pi-header-user .navbar-nav li a {
-    font-size: 12px;
+/* user bar */
+.pi-header .pi-header-user .navbar-nav {
+    margin: 10px -15px;
 }
 
 .pi-header .user-bar a {
     color: #fff;
 }
 
+.pi-header .pi-header-user .navbar-nav li  {
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.pi-header .pi-header-user .navbar-nav li a {
+    font-size: 12px;
+}
+
+.pi-header .pi-header-user .navbar-nav li a:hover {
+    background: #A5A5A5;
+    color: #fff;
+}
+
+.pi-header .pi-header-user .btn-primary {
+    color: #fff;
+    background-color: #C6C6C6;
+    border-color: #C6C6C6;
+}
+
+.pi-header .pi-header-user .btn-primary:focus,
+.pi-header .pi-header-user .btn-primary.focus {
+    color: #fff;
+    background-color: #A5A5A5;
+    border-color: #A5A5A5;
+}
+
+.pi-header .pi-header-user .btn-primary:hover {
+    color: #fff;
+    background-color: #A5A5A5;
+    border-color: #A5A5A5;
+}
+
+.pi-header .pi-header-user .btn-primary .badge {
+    color: #fff;
+    background-color: #ff0000;
+}
+
+.pi-header .pi-header-user .btn-success {
+    color: #fff;
+    background-color: #C6C6C6;
+    border-color: #C6C6C6;
+}
+
+.pi-header .pi-header-user .btn-success:focus,
+.pi-header .pi-header-user .btn-success.focus {
+    color: #fff;
+    background-color: #A5A5A5;
+    border-color: #A5A5A5;
+}
+
+.pi-header .pi-header-user .btn-success:hover {
+    color: #fff;
+    background-color: #A5A5A5;
+    border-color: #A5A5A5;
+}
+
+/* nav */
+.pi-header .nav > li {
+    display: inline;
+}
+
+.pi-header .nav > li > a {
+    display: inline;
+    padding: 5px 15px;
+}
+
+.pi-header .navbar-nav {
+    margin: 7.5px -15px;
+}
+
+.pi-header .navbar {
+    position: relative;
+    min-height: 30px;
+    margin-bottom: 20px;
+    border: 0;
+}
+
 .pi-header .navbar-default {
-    margin-bottom: 0;
+    padding: 0;
+    margin: 0;
     border-radius: 0;
     background: #fff;
     border-color: #fff;
-    height: 30px;
-}
-
-.pi-header .navbar-default .navbar-collapse {
-    padding-right: 0;
-    padding-left: 0;
 }
 
 .pi-header .navbar-default ul {
     width: 100%;
+    padding: 0;
+    margin: 0;
 }
 
 .pi-header .navbar-default ul li {
-    width: 12.4%;
     text-align: center;
-    padding: 0 10px;
 }
-.pi-header .navbar-default ul li a.navbar-top-link {
+
+.pi-header .navbar-default > ul > li {
+    width: 12%;
+    margin: 0 .25%;
     background: #C6C6C6;
     color: #fff;
     font-size: 11px;
     font-weight: bold;
-    padding: 4px 5px;
+    border-radius: 20px 0 20px 20px;
+    padding: 8px 1px;
+}
+
+.pi-header .navbar-default > ul > li:last-child {
+    margin: 0 .4% 0 0 !important;
+}
+
+.pi-header .navbar-default > ul > li > a {
+    width: 100%;
+    background: #C6C6C6;
+    color: #fff;
     border-radius: 20px 0 20px 20px;
 }
 
-.pi-header .navbar-default ul li a.navbar-top-link:hover,
-.pi-header .navbar-default ul li a.navbar-top-link:focus {
+.pi-header .navbar-default > ul > li:hover,
+.pi-header .navbar-default > ul > li:focus,
+.pi-header .navbar-default > ul > li:hover a,
+.pi-header .navbar-default > ul > li:focus a,
+.pi-header .navbar-default > ul > li > a:hover,
+.pi-header .navbar-default > ul > li > a:focus {
     background: #A5A5A5;
     color: #fff;
 }
 
-.pi-header .navbar-default ul li a.active {
-    background: #A5A5A5;
-    color: #fff;
-    padding-bottom: 20px;
-    border-radius: 20px 0 0 0;
-}
-
-.pi-header .navbar-default .yamm .nav,
-.pi-header .navbar-default .yamm .collapse,
-.pi-header .navbar-default .yamm .dropup,
-.pi-header .navbar-default .yamm .dropdown {
+.pi-header .yamm .nav,
+.pi-header .yamm .collapse,
+.pi-header .yamm .dropup,
+.pi-header .yamm .dropdown {
     position: static;
 }
 
-.pi-header .navbar-default .yamm .container {
+.pi-header .yamm .container {
     position: relative !important;
     z-index: 10000 !important;
     height: auto !important;
 }
 
-.pi-header .navbar-default .yamm .dropdown-menu {
+.pi-header .yamm .dropdown-menu {
     right: auto;
     margin-top: 0;
     padding-top: 0;
@@ -473,19 +549,18 @@ form .icon-question-sign {
     border: 0;
 }
 
-.pi-header .navbar-default .yamm .yamm-content {
+.pi-header .yamm .yamm-content {
     padding: 20px 30px;
 }
 
-.pi-header .navbar-default .yamm .dropdown.yamm-fw .dropdown-menu {
+.pi-header .yamm .dropdown.yamm-fw .dropdown-menu {
     left: 0;
     right: 0;
-    width: 100% !important;
 }
 
 .pi-header .navbar-default .grid-menu {
     width: 100% !important;
-    margin: 0 25px 0 25px;
+
     padding: 10px 30px;
     color: #fff;
     border-radius: 20px;
@@ -538,9 +613,9 @@ form .icon-question-sign {
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1; /* number of lines to show */
-    line-height: 20px;        /* fallback */
-    max-height: 30px;       /* fallback */
+    -webkit-line-clamp: 1;
+    line-height: 20px;
+    max-height: 30px;
 }
 
 .pi-header .navbar-default .grid-menu a {
@@ -552,7 +627,7 @@ form .icon-question-sign {
     color: #F7931D;
 }
 
-.pi-header .navbar-default .grid-menu ol {
+.pi-header .navbar-default .grid-menu ul {
     margin: 4px 20px 20px 20px;
 }
 
@@ -562,6 +637,7 @@ form .icon-question-sign {
     width: 100%;
     text-align: right;
 }
+
 /* section */
 .pi-section {
     padding: 15px 0;
