@@ -133,17 +133,17 @@ $platform = Pi::service('browser')->getPlatform();
                     <ul>
                         <li>
                             <a href="<?php echo Pi::url($this->url('home')); ?>video/submit" title="ارسال ویدیو">
-                                <img src="<?php echo $this->assetTheme('image/header-upload.png'); ?>" alt="" class="img-responsive">
+                                <img src="<?php echo $this->assetTheme('image/header-upload.png'); ?>" alt="ارسال ویدیو" class="img-responsive">
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="">
-                                <img src="<?php echo $this->assetTheme('image/header-live-3.png'); ?>" alt="" class="img-responsive">
+                            <a href="<?php echo Pi::url($this->url('home')); ?>page/live-tv3" title="پخش زنده شبکه ۳">
+                                <img src="<?php echo $this->assetTheme('image/header-live-3.png'); ?>" alt="پخش زنده شبکه ۳" class="img-responsive">
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="">
-                                <img src="<?php echo $this->assetTheme('image/header-live-varzesh.png'); ?>" alt="" class="img-responsive">
+                            <a href="<?php echo Pi::url($this->url('home')); ?>page/live-varzesh" title="پخش زنده شبکه ورزش">
+                                <img src="<?php echo $this->assetTheme('image/header-live-varzesh.png'); ?>" alt="پخش زنده شبکه ورزش" class="img-responsive">
                             </a>
                         </li>
                         <li>
@@ -292,17 +292,23 @@ $platform = Pi::service('browser')->getPlatform();
                                             <div class="col-xs-6 row">
                                                 <h4>باشگاه ها روی نقشه</h4>
                                                 <div class="clearfix">
-                                                    <ul class="list-unstyled col-xs-12">
-                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map" title="نقشه کامل تمام استان ها">نقشه کامل تمام استان ها</a></li>
-                                                    </ul>
-                                                    <ul class="list-unstyled col-xs-6">
-                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/1" title="استان تهران">استان تهران</a></li>
-                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/3" title="شهر تهران">شهر تهران</a></li>
-                                                    </ul>
-                                                    <ul class="list-unstyled col-xs-6">
-                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/189" title="استان اصفهان">استان اصفهان</a></li>
-                                                        <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/4" title="شهر اصفهان">شهر اصفهان</a></li>
-                                                    </ul>
+                                                    <div class="col-xs-12">
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map" title="نقشه کامل تمام استان ها">نقشه کامل تمام استان ها</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/1" title="استان تهران">استان تهران</a></li>
+                                                            <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/3" title="شهر تهران">شهر تهران</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="col-xs-6">
+                                                        <ul class="list-unstyled">
+                                                            <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/189" title="استان اصفهان">استان اصفهان</a></li>
+                                                            <li><a href="<?php echo Pi::url($this->url('home')); ?>guide/map/location/4" title="شهر اصفهان">شهر اصفهان</a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                                 <h4>ورزش های پر طرفدار</h4>
                                                 <div class="clearfix">
