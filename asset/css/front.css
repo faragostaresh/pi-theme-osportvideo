@@ -1028,3 +1028,24 @@ form .icon-question-sign {
 .shop-block .owl-carousel .thumbnail {
     background-image: none !important;
 }
+
+/* Guide custom map */
+#guide-custom-map {
+    position: relative;
+    margin: 15px 0;
+}
+
+[data-platform*=ie] #guide-custom-map > svg {
+    height: 430px
+}
+
+#guide-custom-map [data-map] path {
+    fill: #FF8200;
+    stroke: #fff;
+    stroke-width: .03rem
+}
+
+#guide-custom-map [data-map] path.active,
+#guide-custom-map [data-map] path:hover {
+    fill: #ffa000;
+}
