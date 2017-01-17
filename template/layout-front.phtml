@@ -741,6 +741,7 @@ $platform = Pi::service('browser')->getPlatform();
         </div>
     </div>
 </footer>
+<?php if (!in_array($platform, array('Android', 'Ios', 'iPhone', 'iPad'))) { ?>
 <section class="pi-side-network hidden-xs hidden-sm">
     <ul>
         <li>
@@ -770,5 +771,6 @@ $platform = Pi::service('browser')->getPlatform();
         </li>
     </ul>
 </section>
+<?php } ?>
 </body>
 </html>
