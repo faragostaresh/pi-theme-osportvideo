@@ -74,7 +74,7 @@ if (is_array($block['content'])) {
     $heading = sprintf('<div class="panel-heading">%s</div>', $heading);
 } else {
     // Check subline
-    if (!empty($block['subline'])) {
+    /* if (!empty($block['subline'])) {
         $heading = sprintf(
             '<div class="pi-panel-subline">%s</div>%s',
             $block['subline'],
@@ -82,18 +82,27 @@ if (is_array($block['content'])) {
         );
     } else {
         $heading = $block['title'];
+    } */
+    $heading = $block['title'];
+    $moreLink = '';
+    if (!empty($block['subline'])) {
+        $moreLink = sprintf(
+            '<div class="pi-block-more"><a href="%s">%s</a></div>',
+            $block['subline'],
+            'موارد بیشتر'
+        );
     }
     // Check fullsize
     if ($block['body_fullsize']) {
         $class = sprintf('pi-block %s', $block['class']);
         if (!$block['title_hidden']) {
-            $heading = sprintf('<div class="pi-block-title"><h2>%s</h2></div>', $heading);
+            $heading = sprintf('<div class="pi-block-title clearfix"><h2>%s</h2>%s</div>', $heading, $moreLink);
         }
         $body = sprintf('<div class="pi-block-content">%s</div>', $block['content']);
     } else {
         $class = sprintf('panel panel-default %s', $block['class']);
         if (!$block['title_hidden']) {
-            $heading = sprintf('<div class="panel-heading"><h2 class="panel-title">%s</h2></div>', $heading);
+            $heading = sprintf('<div class="panel-heading clearfix"><h2 class="panel-title">%s</h2>%s</div>', $heading, $moreLink);
         }
         $body = sprintf('<div class="panel-body">%s</div>', $block['content']);
     }

@@ -747,10 +747,16 @@ form .icon-question-sign {
 
 .pi-zone-8 .panel-title {
     margin: 0 auto;
+    float: right;
 }
 
 .pi-zone-2 .panel-title {
     width: 260px;
+    float: right;
+}
+
+.pi-zone-7  .panel-title {
+    float: right;
 }
 
 .panel-default {
@@ -1052,4 +1058,18 @@ form .icon-question-sign {
 #guide-custom-map [data-map] path.active,
 #guide-custom-map [data-map] path:hover {
     fill: #ffa000;
+}
+
+/* player */
+.qmery-player-min-height {
+    min-height: 420px;
+}
+
+.qmery-player-full-heigh {
+    height: 100%;
+}
+
+.pi-block-more {
+    float: left;
+    padding-top: 5px;
 }
