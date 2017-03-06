@@ -799,6 +799,8 @@ form .icon-question-sign {
 }
 
 .thumbnail .caption {
+    text-overflow: ellipsis;
+    white-space: nowrap;
     min-height: 65px;
     padding: 15px 0 5px 0;
     background-image: url('../image/thumbnail-caption.png');
