@@ -11,6 +11,13 @@
                            ng-model-options="{ debounce: 5000 }">
                 </div>
 
+                <div class="form-group">
+                    <rzslider class="custom-slider"
+                              rz-slider-model="slider.minValue"
+                              rz-slider-high="slider.maxValue"
+                              rz-slider-options="slider.options"></rzslider>
+                </div>
+
 
                 <div class="ng-scope">
 
@@ -23,7 +30,7 @@
                         <label>نوع محصول</label>
                         <select class="form-control" ng-model="filter.productkind" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
                             <option value="">همه</option>
-                            <option value="لباس">                                        لباس
+                            <option value="لباس">                                      لباس
                             </option>
                             <option value="کفش">                                       کفش
                             </option>
@@ -199,17 +206,9 @@
                                 هلند
                             </option>
                             <option value="اسپانیا">اسپانیا</option>
-                            <option value="">
-
-
-                            </option>
                         </select>
                     </div>
-
                 </div>
-
-
-
                 <div class="text-center">
                     <button class="btn btn-info" ng-click="filterAction()">
                         <i class="fa fa-search"></i> {{'SEARCH' | translate}}
