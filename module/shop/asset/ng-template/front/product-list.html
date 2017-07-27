@@ -12,10 +12,17 @@
                 </div>
 
                 <div class="form-group">
-                    <rzslider class="custom-slider"
-                              rz-slider-model="slider.minValue"
-                              rz-slider-high="slider.maxValue"
-                              rz-slider-options="slider.options"></rzslider>
+                    <label>{{'CODE' | translate}}</label>
+                    <input type="text" class="form-control" ng-model="filter.code" ng-change="filterAction()" ng-model-options="{ debounce: 5000 }">
+                </div>
+
+                <div ng-if="condition.priceFilter == 1">
+                    <div class="form-group">
+                        <rzslider class="custom-slider"
+                                  rz-slider-model="slider.minValue"
+                                  rz-slider-high="slider.maxValue"
+                                  rz-slider-options="slider.options"></rzslider>
+                    </div>
                 </div>
 
 
